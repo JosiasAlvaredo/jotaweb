@@ -1,0 +1,14 @@
+body {
+  scroll-behavior: smooth;
+}
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+#detalle-producto img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
