@@ -23,12 +23,13 @@ function cargarProductos() {
     const card = document.createElement("div");
     card.className = "card";
     card.style.width = "18rem";
-    card.innerHTML = `
-      <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.nombre}">
-      <div class="card-body">
-        <h5 class="card-title">${producto.nombre}</h5>
-        <p class="card-text">Desde $${producto.precio}</p>
-        <button class="btn btn-primary" onclick="mostrarDetalle(${producto.id})">Más detalles</button>
+    contenedor.innerHTML += `
+      <div class="card" style="width: 18rem;">
+        <img src="${producto.imagenes[0]}" class="card-img-top" alt="${producto.nombre}">
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <a href="detalle.html?id=${producto.id}" target="_blank" class="btn btn-primary">Más detalles</a>
+        </div>
       </div>
     `;
     contenedor.appendChild(card);
